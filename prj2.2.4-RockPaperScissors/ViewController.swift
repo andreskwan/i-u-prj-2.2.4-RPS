@@ -23,11 +23,8 @@ class ViewController: UIViewController {
     @IBAction func rockButton(sender: UIButton) {
         var controller : ResultVC
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultVC") as! ResultVC
-        //TODO: create a method (takes a ResultVC) -> set it according to a random value
-        
-//        controller.matchImage.image = UIImage(named:"RockCrushesScissors")
+        controller.userObj = 1
         presentViewController(controller, animated: true, completion: nil)
     }
-
 }
 
