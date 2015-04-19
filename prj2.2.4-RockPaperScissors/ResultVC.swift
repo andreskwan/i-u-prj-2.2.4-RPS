@@ -10,16 +10,20 @@ import UIKit
 
 class ResultVC: UIViewController {
 
-    var userObj    :Int?
-    var machineObj :Int?
+    var winnerObj    :String?
+    var message      :String?
 
     @IBOutlet weak var matchImage: UIImageView!
     @IBOutlet weak var matchLabel: UILabel!
     
     override func viewWillAppear(animated: Bool) {
-        if let userObj = self.userObj{
-            self.matchImage.image = UIImage(named: "RockCrushesScissors")
+        if let winnerObj = self.winnerObj{
+            self.matchImage.image = UIImage(named: winnerObj)
         }
+        if let message = self.message{
+            self.matchLabel.text = message
+        }
+        
     }
 
     @IBAction func playAgainButon(sender: UIButton) {

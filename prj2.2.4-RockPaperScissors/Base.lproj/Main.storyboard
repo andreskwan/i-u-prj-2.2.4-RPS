@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -31,6 +32,9 @@
                                 <state key="normal" image="paper">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="paperButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CCa-md-NKm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3V-k1-AWf">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -84,20 +88,20 @@
                                 <exclude reference="n1c-Gl-T1G"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="bLR-dZ-y3w"/>
+                                <exclude reference="l6x-me-NtL"/>
                                 <exclude reference="bal-u4-z8z"/>
-                                <exclude reference="Opd-pf-SVi"/>
-                                <exclude reference="cEm-Ij-FMj"/>
-                                <exclude reference="plt-8J-t8K"/>
+                                <exclude reference="QCO-h2-g5l"/>
+                                <exclude reference="Rat-bT-hzT"/>
                                 <exclude reference="6kY-jp-yPX"/>
                                 <exclude reference="AOf-Bx-Qqn"/>
                                 <exclude reference="ylF-JD-qoM"/>
-                                <exclude reference="QCO-h2-g5l"/>
-                                <exclude reference="Rat-bT-hzT"/>
                                 <exclude reference="Ho8-Cr-oLu"/>
                                 <exclude reference="fGn-xS-jDs"/>
                                 <exclude reference="l7T-7N-hT3"/>
-                                <exclude reference="bLR-dZ-y3w"/>
-                                <exclude reference="l6x-me-NtL"/>
+                                <exclude reference="Opd-pf-SVi"/>
+                                <exclude reference="cEm-Ij-FMj"/>
+                                <exclude reference="plt-8J-t8K"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -110,23 +114,26 @@
                                 <include reference="n1c-Gl-T1G"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="bLR-dZ-y3w"/>
+                                <include reference="l6x-me-NtL"/>
                                 <include reference="bal-u4-z8z"/>
-                                <include reference="Opd-pf-SVi"/>
-                                <include reference="cEm-Ij-FMj"/>
-                                <include reference="plt-8J-t8K"/>
+                                <include reference="QCO-h2-g5l"/>
+                                <include reference="Rat-bT-hzT"/>
                                 <include reference="6kY-jp-yPX"/>
                                 <include reference="AOf-Bx-Qqn"/>
                                 <exclude reference="ylF-JD-qoM"/>
-                                <include reference="QCO-h2-g5l"/>
-                                <include reference="Rat-bT-hzT"/>
                                 <include reference="Ho8-Cr-oLu"/>
                                 <exclude reference="fGn-xS-jDs"/>
                                 <include reference="l7T-7N-hT3"/>
-                                <include reference="bLR-dZ-y3w"/>
-                                <include reference="l6x-me-NtL"/>
+                                <include reference="Opd-pf-SVi"/>
+                                <include reference="cEm-Ij-FMj"/>
+                                <include reference="plt-8J-t8K"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <segue destination="FJL-2A-iMh" kind="presentation" identifier="ResultVCSegue" id="FG7-6O-WQH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,6 +148,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7Zd-aU-QdL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="V0O-he-DNJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message win/lose/tile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYO-xs-QB0">
@@ -193,14 +201,14 @@
                                 <exclude reference="ZD4-xj-ula"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Pvp-8S-8UJ"/>
-                                <exclude reference="h5w-nD-yuD"/>
-                                <exclude reference="p3x-r1-s4x"/>
+                                <exclude reference="7Qu-6k-NdN"/>
                                 <exclude reference="6ou-7S-Wxd"/>
                                 <exclude reference="bjl-KX-Olz"/>
                                 <exclude reference="tCS-Ba-59l"/>
                                 <exclude reference="Uc6-bg-aDa"/>
-                                <exclude reference="7Qu-6k-NdN"/>
+                                <exclude reference="Pvp-8S-8UJ"/>
+                                <exclude reference="h5w-nD-yuD"/>
+                                <exclude reference="p3x-r1-s4x"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -210,14 +218,14 @@
                                 <include reference="ZD4-xj-ula"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Pvp-8S-8UJ"/>
-                                <include reference="h5w-nD-yuD"/>
-                                <include reference="p3x-r1-s4x"/>
+                                <include reference="7Qu-6k-NdN"/>
                                 <include reference="6ou-7S-Wxd"/>
                                 <include reference="bjl-KX-Olz"/>
                                 <include reference="tCS-Ba-59l"/>
                                 <include reference="Uc6-bg-aDa"/>
-                                <include reference="7Qu-6k-NdN"/>
+                                <exclude reference="Pvp-8S-8UJ"/>
+                                <include reference="h5w-nD-yuD"/>
+                                <include reference="p3x-r1-s4x"/>
                             </mask>
                         </variation>
                     </view>

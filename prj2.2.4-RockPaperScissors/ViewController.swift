@@ -23,8 +23,18 @@ class ViewController: UIViewController {
     @IBAction func rockButton(sender: UIButton) {
         var controller : ResultVC
         controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultVC") as! ResultVC
-        controller.userObj = 1
+        controller.winnerObj = playGame()
+        controller.message   = "Rock wins!"
         presentViewController(controller, animated: true, completion: nil)
     }
+    
+    func playGame() -> String {
+        return "ScissorsCutPaper"
+    }
+    
+    @IBAction func paperButton(sender: UIButton) {
+//        ResultVCSegue
+    }
+    
 }
 
