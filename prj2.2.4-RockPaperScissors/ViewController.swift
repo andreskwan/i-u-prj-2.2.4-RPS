@@ -29,12 +29,23 @@ class ViewController: UIViewController {
     }
     
     func playGame() -> String {
-        return "ScissorsCutPaper"
+        return "RockCrushesScissors"
     }
     
     @IBAction func paperButton(sender: UIButton) {
-//        ResultVCSegue
+        //sender here is self because is the VC which is associated with the segue, not the button
+        performSegueWithIdentifier("ResultVCSegue", sender: self)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ResultVCSegue"{
+            let controller = segue.destinationViewController as! ResultVC
+            controller.winnerObj = "PaperCoversRock"
+            controller.message   = "Paper wins!"
+        }else if segue.identifier == "SegueFromScissors"{
+            let controller = segue.destinationViewController as! ResultVC
+            controller.winnerObj = "ScissorsCutPaper"
+            controller.message   = "Scissors wins!"
+        }
+    }
 }
-

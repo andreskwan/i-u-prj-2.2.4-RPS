@@ -41,6 +41,9 @@
                                 <state key="normal" image="scissors">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="FJL-2A-iMh" kind="presentation" identifier="SegueFromScissors" id="h0Q-h6-KJC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code &amp; Storyboard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0z-mf-xYr">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -245,4 +248,7 @@
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="h0Q-h6-KJC"/>
+    </inferredMetricsTieBreakers>
 </document>
