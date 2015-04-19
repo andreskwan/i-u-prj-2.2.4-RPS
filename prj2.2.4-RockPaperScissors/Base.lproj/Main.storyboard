@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="prj2_2_4_RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="vXZ-lx-hvc" customClass="ViewController" customModule="prj2_2_4_RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -22,6 +22,9 @@
                                 <state key="normal" image="rock">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="rockButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1qb-wB-k3k"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rtJ-5E-uMp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -127,9 +130,109 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="282" y="199"/>
+        </scene>
+        <!--ResultVC-->
+        <scene sceneID="KwR-jz-VL0">
+            <objects>
+                <viewController storyboardIdentifier="ResultVC" id="FJL-2A-iMh" customClass="ResultVC" customModule="prj2_2_4_RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X0R-W2-1Jl"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Zd-aU-QdL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V0O-he-DNJ">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message win/lose/tile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYO-xs-QB0">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5O2-dX-lOb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Play Again!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgainButon:" destination="FJL-2A-iMh" eventType="touchUpInside" id="E9y-TD-qex"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PaperCoversRock" translatesAutoresizingMaskIntoConstraints="NO" id="ZD4-xj-ula">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="p77-5y-eCG"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="p77-5y-eCG"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="p77-5y-eCG"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HYO-xs-QB0" firstAttribute="centerX" secondItem="ZD4-xj-ula" secondAttribute="centerX" id="6ou-7S-Wxd"/>
+                            <constraint firstItem="7Zd-aU-QdL" firstAttribute="top" secondItem="5O2-dX-lOb" secondAttribute="bottom" constant="60" id="7Qu-6k-NdN"/>
+                            <constraint firstAttribute="centerX" secondItem="ZD4-xj-ula" secondAttribute="centerX" id="Pvp-8S-8UJ"/>
+                            <constraint firstItem="5O2-dX-lOb" firstAttribute="centerX" secondItem="V0O-he-DNJ" secondAttribute="centerX" id="Uc6-bg-aDa"/>
+                            <constraint firstItem="HYO-xs-QB0" firstAttribute="centerX" secondItem="5O2-dX-lOb" secondAttribute="centerX" id="bjl-KX-Olz"/>
+                            <constraint firstItem="ZD4-xj-ula" firstAttribute="top" secondItem="X0R-W2-1Jl" secondAttribute="bottom" constant="76" id="h5w-nD-yuD"/>
+                            <constraint firstItem="ZD4-xj-ula" firstAttribute="leading" secondItem="V0O-he-DNJ" secondAttribute="leadingMargin" constant="24" id="p3x-r1-s4x"/>
+                            <constraint firstItem="HYO-xs-QB0" firstAttribute="top" secondItem="ZD4-xj-ula" secondAttribute="bottom" constant="48" id="tCS-Ba-59l"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="HYO-xs-QB0"/>
+                                <exclude reference="5O2-dX-lOb"/>
+                                <exclude reference="ZD4-xj-ula"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Pvp-8S-8UJ"/>
+                                <exclude reference="h5w-nD-yuD"/>
+                                <exclude reference="p3x-r1-s4x"/>
+                                <exclude reference="6ou-7S-Wxd"/>
+                                <exclude reference="bjl-KX-Olz"/>
+                                <exclude reference="tCS-Ba-59l"/>
+                                <exclude reference="Uc6-bg-aDa"/>
+                                <exclude reference="7Qu-6k-NdN"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="HYO-xs-QB0"/>
+                                <include reference="5O2-dX-lOb"/>
+                                <include reference="ZD4-xj-ula"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Pvp-8S-8UJ"/>
+                                <include reference="h5w-nD-yuD"/>
+                                <include reference="p3x-r1-s4x"/>
+                                <include reference="6ou-7S-Wxd"/>
+                                <include reference="bjl-KX-Olz"/>
+                                <include reference="tCS-Ba-59l"/>
+                                <include reference="Uc6-bg-aDa"/>
+                                <include reference="7Qu-6k-NdN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="matchImage" destination="ZD4-xj-ula" id="aQa-Ny-qLw"/>
+                        <outlet property="matchLabel" destination="HYO-xs-QB0" id="xes-Bb-6FK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ffi-m8-FOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1023" y="199"/>
         </scene>
     </scenes>
     <resources>
+        <image name="PaperCoversRock" width="160" height="120"/>
         <image name="paper" width="75" height="65"/>
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>

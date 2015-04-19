@@ -13,6 +13,7 @@
 		EA7999C61AE424A100F30268 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7999C51AE424A100F30268 /* Images.xcassets */; };
 		EA7999C91AE424A100F30268 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7999C71AE424A100F30268 /* LaunchScreen.xib */; };
 		EA7999D51AE424A100F30268 /* prj2_2_4_RockPaperScissorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7999D41AE424A100F30268 /* prj2_2_4_RockPaperScissorsTests.swift */; };
+		EA7999DF1AE4286200F30268 /* ResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7999DE1AE4286200F30268 /* ResultVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EA7999CE1AE424A100F30268 /* prj2.2.4-RockPaperScissorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "prj2.2.4-RockPaperScissorsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7999D31AE424A100F30268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA7999D41AE424A100F30268 /* prj2_2_4_RockPaperScissorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prj2_2_4_RockPaperScissorsTests.swift; sourceTree = "<group>"; };
+		EA7999DE1AE4286200F30268 /* ResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		EA7999BB1AE424A100F30268 /* prj2.2.4-RockPaperScissors */ = {
 			isa = PBXGroup;
 			children = (
+				EA7999DE1AE4286200F30268 /* ResultVC.swift */,
 				EA7999BE1AE424A100F30268 /* AppDelegate.swift */,
 				EA7999C01AE424A100F30268 /* ViewController.swift */,
 				EA7999C21AE424A100F30268 /* Main.storyboard */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA7999C11AE424A100F30268 /* ViewController.swift in Sources */,
+				EA7999DF1AE4286200F30268 /* ResultVC.swift in Sources */,
 				EA7999BF1AE424A100F30268 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

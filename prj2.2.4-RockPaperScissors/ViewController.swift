@@ -20,6 +20,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func rockButton(sender: UIButton) {
+        var controller : ResultVC
+        controller = self.storyboard?.instantiateViewControllerWithIdentifier("ResultVC") as! ResultVC
+        //TODO: create a method (takes a ResultVC) -> set it according to a random value
+        
+//        controller.matchImage.image = UIImage(named:"RockCrushesScissors")
+        presentViewController(controller, animated: true, completion: nil)
+    }
 
 }
 
